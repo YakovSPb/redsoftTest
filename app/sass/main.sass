@@ -1,0 +1,414 @@
+@import vars
+@import fonts
+@import libs
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: 'Calibri', sans-serif
+	overflow-x: hidden
+	color: $text
+	background: #fafaff
+.btn
+	border: 2px solid #5489c3
+	font-size: 16px
+	padding-bottom: 8px
+	text-decoration: none
+	color: #fdfffc
+	font-weight: 700
+	height: 60px
+	width: 200px
+	border-radius: 30px
+	display: flex
+	align-items: center
+	justify-content: center
+	transition: all .3s ease
+	&:hover
+		color: #fdfffc
+		text-decoration: none
+	&--red
+		background: $accent
+		width: 180px
+		border: none
+		margin: 0 auto
+		border: 2px solid $accent
+		&:hover
+			background: #fff
+			color: $accent
+
+.h2
+	font-size: 36px
+	font-weight: 400
+	text-align: center
+
+// Custom Sass / Remove before use
+
+.container
+	max-width: 1160px
+	padding:
+		right: $gutter/2
+		left: $gutter/2
+	margin:
+		left: auto
+		right: auto
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+
+// HEADER
+.header
+	position: relative
+	&__inner
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding-top: 18px
+		z-index: 10
+		width: 100%
+		max-width: 1160px
+	&__wrap
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		z-index: 1
+
+.menu
+	max-width: 500px
+	width: 100%
+	&__list
+		display: flex
+		list-style-type: none
+		justify-content: space-between
+		padding-left: 0
+		margin-bottom: 0
+	&__link
+		color: #fdfffc
+		position: relative
+		line-height: 30px
+		display: block
+		&:hover
+			color: #fdfffc
+			text-decoration: none
+			&:after
+				content: ''
+				position: absolute
+				width: 4px
+				height: 4px
+				background: #fdfffc
+				bottom: -6px
+				left: 50%
+				margin-left: -2px
+				border-radius: 100%
+.h1
+	font-size: 36px
+	line-height: 54px
+	color: #fff
+	text-align: center
+	font-weight: 400
+.h2
+	font-size: 36px
+.slide
+	height: 1307px
+	background: url('../img/@2x/promo-bg3.jpg') no-repeat
+	background-size: cover
+	background-position: top
+	width: 100%
+	text-align: center
+	padding-top: 200px
+	&__inner
+		max-width: 650px
+		margin: 0 auto
+	&__desc
+			color: #fff
+			font-size: 24px
+			line-height: 30px
+			margin-top: 30px
+	&__btn
+		margin-top: 50px
+
+
+// SECTION DIARY
+.diary
+	max-width: 1000px
+	margin: -415px auto 0 auto
+	position: relative
+	&__inner
+		display: flex
+		justify-content: center
+	&__title
+		margin-top: 90px
+	&__list
+		max-width: 460px
+		ul
+			padding-left: 18px
+		li
+			list-style-type: none
+			position: relative
+			margin-bottom: 15px
+			line-height: 20px
+			&:before
+				content: ''
+				position: absolute
+				top: 7px
+				left: -17px
+				width: 4px
+				height: 4px
+				background: #16afe0
+				border-radius: 100%
+	&__btn
+		.btn
+			margin-left: 0
+			margin-top: 50px
+			
+.slider__dots
+	position: absolute
+	top: 684px
+	left: 50%
+	margin-left: -35px
+	z-index: 1000
+	ul
+		display: flex
+		align-items: center
+		justify-content: center
+		padding-left: 0
+		margin-left: 0
+		border: 1px solid #5489c3
+		height: 16px
+		width: 70px
+		border-radius: 20px
+		margin: 0
+	.slick-active
+		background: #fff
+	li
+		list-style-type: none
+		width: 16px
+		height: 1px
+		background: #5489c3
+		margin-right: 8px
+		cursor: pointer
+		&:last-child
+			margin-right: 0
+		button
+			display: none
+
+// SECTION FUNCTIONS
+.functions
+	&__line
+		img
+			width: 100%
+	&__wrap
+		background: #f1f3fb
+	&__title
+		text-align: center
+		padding-top: 50px
+	&__icons
+		display: flex
+		flex-wrap: wrap
+		margin-top: 30px
+		padding-bottom: 50px
+	&__icon
+		text-align: center
+		margin-bottom: 70px
+		width: 33%
+	&__img
+		width: 80px
+		height: 80px
+		margin: 0 auto
+		border: 1px solid #bde3f5
+		border-radius: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+	&__text
+		line-height: 18px
+		margin: 20px auto 0 auto
+		max-width: 180px
+
+// SECTION HEALTH
+.health
+	padding: 150px 0 100px 0
+	&__inner
+		margin-top: 90px
+		display: flex
+		justify-content: space-between
+	&__item
+		position: relative
+		background: #fafaff
+	&__number
+		position: absolute
+		top: -17px
+		left: -107px
+		font-size: 60px
+		color: #b9dff4
+		border: 1px solid #c2e8f7
+		width: 122px
+		height: 122px
+		display: flex
+		align-items: center
+		justify-content: center
+		border-radius: 100%
+		z-index: -1
+	&__content
+		max-width: 600px
+		margin-left: 60px
+	&__bold
+		font-size: 24px
+		margin-bottom: 10px
+	&__text
+		line-height: 22px
+		margin-bottom: 90px
+
+// SECTION MASTER
+.master
+	position: relative
+	display: flex
+	background: #f2f2f9
+	padding-bottom: 110px
+	&__content
+		max-width: 600px
+		width: 100%
+		margin-left: 40px
+	&__img
+		img
+			width: 100%
+			z-index: 1
+			position: relative
+			margin-top: -50px
+	&__list
+		float: right
+		ul
+			padding-left: 18px
+		li
+			list-style-type: none
+			position: relative
+			margin-bottom: 15px
+			line-height: 20px
+			&:before
+				content: ''
+				position: absolute
+				top: 7px
+				left: -17px
+				width: 4px
+				height: 4px
+				background: #16afe0
+				border-radius: 100%
+	&__h2
+		margin-top: 40px
+		margin-bottom: 20px
+		text-align: left
+
+// FORM
+.form
+	background: #e3e7f3
+	padding: 150px 0
+	&__desc
+		max-width: 580px
+		font-size: 24px
+		line-height: 26px
+		margin: 30px auto
+		text-align: center
+
+.my-form
+	display: flex
+	justify-content: center
+
+.hidden
+	display: none
+.popup-form
+	max-width: 600px!important
+	background: #fff
+	display: flex
+	flex-direction: column
+	align-items: center
+	padding: 40px
+	input
+		margin: 30px auto!important
+.my-form
+	position: relative
+	display: flex
+	margin: 0 auto
+	max-width: 100%
+	width: 100%
+	padding-top: 20px
+	.form__p
+		color: #363636
+		text-align: center
+		font-size: 11px
+		max-width: 300px
+		margin: 0 auto
+		line-height: 14px
+	.btn
+		margin: 0
+		padding-bottom: 0
+		font-size: 16px
+	.h3
+		font-size: 500px
+		font-size: 30px
+		color: #000
+		margin: 0
+		padding-bottom: 20px
+		text-align: center
+	input, textarea
+		border: 1px solid #4f699b	
+		padding: 9px 9px 9px 30px
+		color: #4f699b
+		margin-bottom: 10px
+		font-size: 14px
+		background: #e3e7f3
+		&::-webkit-input-placeholder
+			color: #a8b2bf
+			opacity: 1
+		&::-moz-placeholder
+			color: #a8b2bf
+			opacity: 1
+		&::-ms-input-placeholder
+			color: #a8b2bf
+	input
+		height: 60px
+		border-radius: 30px
+		max-width: 360px
+		width: 100%
+		margin-right: 40px
+
+
+.footer
+	height: 220px
+	background: #39649d
+	padding: 60px	0 30px
+	&__inner
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-bottom: 40px
+		border-bottom: 1px solid #335b91
+	.menu
+		max-width: 760px
+		.menu__link
+			font-weight: 700
+	&__copy
+		text-align: center
+		font-size: 14px
+		color: #fff
+		margin-top: 35px
+		a
+			color: $accent
